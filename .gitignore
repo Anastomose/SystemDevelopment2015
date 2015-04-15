@@ -10,6 +10,8 @@ slides_sources/build
 
 # ignore .gitignore, so we can each have our own.
 .gitignore
+.gitignore~
 
 *.pyc
 build/
+*.*~
