@@ -4,7 +4,8 @@ import time
 class LoggingMixin(object):
     def log(self):
         print "%s: %s" % (time.time(), repr(self))
-
+        super(LoggingMixin, self).log()
+        
 
 class Vehicle(object):
     def log(self):
@@ -23,7 +24,7 @@ class HeavyVehicle(Vehicle):
     pass
 
 
-class Bike(TwoWheeledVehicle, LightVehicle):
+class Bike(LoggingMixin, TwoWheeledVehicle, LightVehicle):
     pass
 
 
